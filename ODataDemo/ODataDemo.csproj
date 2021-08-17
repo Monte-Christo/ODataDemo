@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -21,6 +21,5 @@
       <HintPath>C:\Program Files\CData\CData ADO.NET Provider for OData 2021\lib\netstandard2.0\System.Data.CData.OData.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 
 </Project>
