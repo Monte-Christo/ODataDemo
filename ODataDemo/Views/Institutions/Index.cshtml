@@ -1,0 +1,743 @@
+﻿@model IEnumerable<ODataDemo.Models.Institution>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Etag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmficodeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attention)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbgcompanyParentRelationshipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbgglobalCompanyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbgglobalUltimateParentCompanyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbgidglobalParentCompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbgissuerNameType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbglegalFormCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbgparentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbgultimateParentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BicindustryGroupCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BicindustrySectorCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BicindustrySubgroupCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryAddressCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryOfDomicileCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryOfIncorporationCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryOfRiskCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerActiveIssues)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerInstitutionNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerIssuerTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerRecordTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ekn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExchangeSymbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FactsetIndustryCodeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalYearEnd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FitchIssuerLongTermRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FitchIssuerLongTermRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GainId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GicsGroupCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GicsIndustryCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GicsSectorCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GicsSubIndustryCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GkNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdBbcompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdcorgId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImmediateParentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndustryGroupCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndustrySectorCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndustrySubgroupCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstitutionRoleCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstitutionUpdatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InternalInstitutionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsLinkedtoInstrument)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsUltimateParent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IGainInstitutionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JcrforeignCcyLongTermIssuerRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JcrforeignCcyLongTermIssuerRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JcrissuerLongTermRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JcrissuerLongTermRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JcrlocalCcyLongTermIssuerRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JcrlocalCcyLongTermIssuerRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LegalEntityCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LegalEntityTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LegalFormCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeiassignedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeidisabledDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeientityStatusCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Leiid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeilastUpdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeilegalForm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeiregistrationAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalIssuerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LongName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarcissuerLongTermRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarcissuerLongTermRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoodyIssuerLongTermRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoodyIssuerLongTermRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OldUltimateParentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrevTwelveDthreeFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrevTwelveDthreeLockedFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RambissuerLongTermRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RambissuerLongTermRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RedCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReutersOrgId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RidomesticCcyIssuerRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RidomesticCcyIssuerRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RifcissuerRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RifcissuerRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RiissuerRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RiissuerRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpissuerLongTermRatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpissuerLongTermRatingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateOfDomicileCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateOfIncorporationCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateProvinceAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalSharesOutChangedate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalSharesOutstanding)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalSharesOutstandingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalSharesOutValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwelveDthreeChangedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwelveDthreeFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwelveDthreeFlagChangedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwelveDthreeLockedFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwelveDthreeReviewedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UltimateParentChangeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UltimateParentLock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UltimateParentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedBusinessClassifications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedCustomProperties)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedNames)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedRatings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedRelatedInstitutions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedSilverCopies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedSwifts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedTargetSystems)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActiveFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmficodeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Attention)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbgcompanyParentRelationshipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbgglobalCompanyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbgglobalUltimateParentCompanyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbgidglobalParentCompany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbgissuerNameType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbglegalFormCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbgparentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbgultimateParentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BicindustryGroupCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BicindustrySectorCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BicindustrySubgroupCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryAddressCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryOfDomicileCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryOfIncorporationCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryOfRiskCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerActiveIssues)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerInstitutionNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerIssuerTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerRecordTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ekn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExchangeSymbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FactsetIndustryCodeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalYearEnd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FitchIssuerLongTermRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FitchIssuerLongTermRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GainId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GicsGroupCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GicsIndustryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GicsSectorCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GicsSubIndustryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GkNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdBbcompany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdcorgId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImmediateParentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IndustryGroupCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IndustrySectorCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IndustrySubgroupCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstitutionRoleCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstitutionUpdatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InternalInstitutionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsLinkedtoInstrument)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsUltimateParent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IGainInstitutionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JcrforeignCcyLongTermIssuerRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JcrforeignCcyLongTermIssuerRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JcrissuerLongTermRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JcrissuerLongTermRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JcrlocalCcyLongTermIssuerRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JcrlocalCcyLongTermIssuerRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LegalEntityCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LegalEntityTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LegalFormCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeiassignedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeidisabledDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeientityStatusCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Leiid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeilastUpdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeilegalForm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeiregistrationAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalIssuerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LongName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarcissuerLongTermRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarcissuerLongTermRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoodyIssuerLongTermRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoodyIssuerLongTermRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldUltimateParentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrevTwelveDthreeFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrevTwelveDthreeLockedFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RambissuerLongTermRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RambissuerLongTermRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RedCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReutersOrgId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RidomesticCcyIssuerRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RidomesticCcyIssuerRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RifcissuerRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RifcissuerRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RiissuerRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RiissuerRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpissuerLongTermRatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpissuerLongTermRatingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateOfDomicileCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateOfIncorporationCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateProvinceAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalSharesOutChangedate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalSharesOutstanding)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalSharesOutstandingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalSharesOutValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TwelveDthreeChangedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TwelveDthreeFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TwelveDthreeFlagChangedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TwelveDthreeLockedFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TwelveDthreeReviewedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UltimateParentChangeDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UltimateParentLock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UltimateParentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedBusinessClassifications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedCustomProperties)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedNames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedRatings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedRelatedInstitutions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedSilverCopies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedSwifts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedTargetSystems)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

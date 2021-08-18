@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -20,7 +21,7 @@ namespace ODataDemo
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddControllersWithViews();
-      services.AddDbContext<ODataContext>();
+      services.AddDbContext<ODataContext>(options => options.UseOData(Configuration.GetConnectionString("ODataConnection")));
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
