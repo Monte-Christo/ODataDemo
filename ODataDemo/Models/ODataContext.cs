@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -8,13 +9,16 @@ namespace ODataDemo.Models
 {
     public partial class ODataContext : DbContext
     {
-        public ODataContext()
+      private readonly IConfiguration _configuration;
+
+      public ODataContext()
         {
         }
 
-        public ODataContext(DbContextOptions<ODataContext> options)
+        public ODataContext(DbContextOptions<ODataContext> options, IConfiguration configuration)
             : base(options)
         {
+          _configuration = configuration;
         }
 
         public virtual DbSet<Event> Events { get; set; }
@@ -28,7 +32,7 @@ namespace ODataDemo.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-              optionsBuilder.UseOData("Name=ConnectionStrings:ODataConnection");
+              optionsBuilder.UseOData(_configuration.GetConnectionString("ODataConnection"));
             }
         }
 
