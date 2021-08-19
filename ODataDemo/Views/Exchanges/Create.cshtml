@@ -1,0 +1,123 @@
+﻿@model ODataDemo.Models.Exchange
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Exchange</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BbgpricingSource" class="control-label"></label>
+                <input asp-for="BbgpricingSource" class="form-control" />
+                <span asp-validation-for="BbgpricingSource" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryCode" class="control-label"></label>
+                <input asp-for="CountryCode" class="form-control" />
+                <span asp-validation-for="CountryCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExchangeTypeCode" class="control-label"></label>
+                <input asp-for="ExchangeTypeCode" class="form-control" />
+                <span asp-validation-for="ExchangeTypeCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HolidayCalendarId" class="control-label"></label>
+                <input asp-for="HolidayCalendarId" class="form-control" />
+                <span asp-validation-for="HolidayCalendarId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdcexchangeCode" class="control-label"></label>
+                <input asp-for="IdcexchangeCode" class="form-control" />
+                <span asp-validation-for="IdcexchangeCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IGainExchangeId" class="control-label"></label>
+                <input asp-for="IGainExchangeId" class="form-control" />
+                <span asp-validation-for="IGainExchangeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IId" class="control-label"></label>
+                <input asp-for="IId" class="form-control" />
+                <span asp-validation-for="IId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mic" class="control-label"></label>
+                <input asp-for="Mic" class="form-control" />
+                <span asp-validation-for="Mic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentExchangeId" class="control-label"></label>
+                <input asp-for="ParentExchangeId" class="form-control" />
+                <span asp-validation-for="ParentExchangeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SixBcncode" class="control-label"></label>
+                <input asp-for="SixBcncode" class="form-control" />
+                <span asp-validation-for="SixBcncode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusCode" class="control-label"></label>
+                <input asp-for="StatusCode" class="form-control" />
+                <span asp-validation-for="StatusCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrexchangeCode" class="control-label"></label>
+                <input asp-for="TrexchangeCode" class="form-control" />
+                <span asp-validation-for="TrexchangeCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Url" class="control-label"></label>
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeekendCode" class="control-label"></label>
+                <input asp-for="WeekendCode" class="form-control" />
+                <span asp-validation-for="WeekendCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WmExchangeCode" class="control-label"></label>
+                <input asp-for="WmExchangeCode" class="form-control" />
+                <span asp-validation-for="WmExchangeCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LinkedCustomProperties" class="control-label"></label>
+                <input asp-for="LinkedCustomProperties" class="form-control" />
+                <span asp-validation-for="LinkedCustomProperties" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LinkedSilverCopies" class="control-label"></label>
+                <input asp-for="LinkedSilverCopies" class="form-control" />
+                <span asp-validation-for="LinkedSilverCopies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
