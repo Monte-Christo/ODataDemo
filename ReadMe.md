@@ -50,8 +50,7 @@ Scaffold-DbContext "URL=http://localhost:8000/odata;" CData.EntityFrameworkCore.
 
 1. Right-click on Controllers folder and click *Add -> Controller...*
 2. Choose *MVC Controller with views uning EF*
-3. Select Model class <Model Name> and context ODataContext
+3. Select Model class \<Model Name\> and context ODataContext
 4. Click *Add*
 5. Run App
-6. Navigate to /<Model Name> endpoint
-
+6. Navigate to /\<Model Name\> endpoint
