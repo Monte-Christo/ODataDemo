@@ -1,6 +1,6 @@
 ﻿# CData OData connector with LinqPad 6
 
-## Instructions
+## Instruction for Using CData Connector
 
 https://www.cdata.com/kb/tech/odata-ado-linqpad.rst
 
@@ -42,5 +42,16 @@ Scaffold-DbContext "URL=http://localhost:8000/odata;" CData.EntityFrameworkCore.
 
 ## LinqPad Integration
 
-- Click on *Add Connection*
-- In the resulting dialog, select the project dll and then the DbContext class.
+1. Click on *Add Connection*
+2. Select *Entity Framework Core (2.x, 3.x, 5.x)*
+3. In the resulting dialog, select the project dll and then the DbContext class.
+
+## Scaffold Controller Code
+
+1. Right-click on Controllers folder and click *Add -> Controller...*
+2. Choose *MVC Controller with views uning EF*
+3. Select Model class <Model Name> and context ODataContext
+4. Click *Add*
+5. Run App
+6. Navigate to /<Model Name> endpoint
+
