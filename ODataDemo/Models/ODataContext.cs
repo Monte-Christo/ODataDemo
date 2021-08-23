@@ -22,10 +22,8 @@ namespace ODataDemo.Models
     {
     }
 
-    private static DbContextOptions GetOptions(string connectionString)
-    {
-      return new DbContextOptionsBuilder().UseOData(connectionString).Options;
-    }
+  private static DbContextOptions GetOptions(string connectionString) => 
+    new DbContextOptionsBuilder().UseOData(connectionString).Options;
 
     public virtual DbSet<Event> Events { get; set; }
     public virtual DbSet<Exchange> Exchanges { get; set; }
