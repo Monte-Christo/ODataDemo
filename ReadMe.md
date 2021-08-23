@@ -47,13 +47,13 @@ Scaffold-DbContext "URL=http://localhost:8000/odata;" CData.EntityFrameworkCore.
 2. Select *Entity Framework Core (2.x, 3.x, 5.x)*
 3. In the resulting dialog, select the project dll and then the DbContext class.
 
-### Hding the Connection String
+### Hiding the Connection String
 
 Add the Connection String as a user secret to the project.
-Due to a bug, the secret cannot be accessed when the context is used in LinqPad. To work around this problem, 
+Due to a bug, the secret cannot be accessed when the context is used in LinqPad. To work around this problem,
 add these lines to ODataContext.cs:
 
-```
+```C#
     public ODataContext(string connectionString) : base(GetOptions(connectionString))
     {
     }
@@ -62,9 +62,9 @@ add these lines to ODataContext.cs:
     {
       return new DbContextOptionsBuilder().UseOData(connectionString).Options;
     }
-
 ```
-Then use the third option when adding the EF DbConnection ("Via a contructor that accepts a string"), enter the connection string and check the *Encrypt* checkbox. 
+
+Then use the third option when adding the EF DbConnection ("Via a constructor that accepts a string"), enter the connection string and check the *Encrypt* checkbox.
 
 ## Scaffold Controller Code
 
