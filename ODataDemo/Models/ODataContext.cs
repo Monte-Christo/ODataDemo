@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -8,7 +9,7 @@ namespace ODataDemo.Models
 {
     public partial class ODataContext : DbContext
     {
-        public ODataContext()
+      public ODataContext()
         {
         }
 
@@ -16,6 +17,16 @@ namespace ODataDemo.Models
             : base(options)
         {
         }
+
+    public ODataContext(string connectionString) : base(GetOptions(connectionString))
+    {
+    }
+
+    private static DbContextOptions GetOptions(string connectionString)
+        {
+          return new DbContextOptionsBuilder().UseOData(connectionString).Options;
+        }  
+
 
         public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<Exchange> Exchanges { get; set; }
