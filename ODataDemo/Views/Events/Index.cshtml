@@ -1,0 +1,2555 @@
+﻿@model IEnumerable<ODataDemo.Models.Event>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Etag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccruedInterestDays)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActualContractualCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdditionalTaxIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdditionalTaxPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdditionalTaxPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdditionalTaxSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdditionalTaxSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdditionalTaxType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Affidavit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aftcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AftmanualSetCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnouncementDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnouncementDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnouncementDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnouncementDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BbgDividendTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BidIntervalRateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BidIntervalRatePrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BidIntervalRatePrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BidIntervalRateSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BidIntervalRateSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BidIntervalRateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockingPeriodIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockingPeriodStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockingPeriodEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockingPeriodType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookClosureperiodIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookClosureperiodStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookClosureperiodEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookClosureperiodType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashflowSetId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashflowSetTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChangeTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodeEventisCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorporateActionEventStageCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CouponNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DefaultTaxRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DenominationCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepositorysuspensionperiodforwithdrawalatagentIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepositorysuspensionperiodforwithdrawalatagentStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepositorysuspensionperiodforwithdrawalatagentEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepositorysuspensionperiodforwithdrawalatagentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DerivedEffectiveDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DerivedEffectiveDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DerivedEffectiveDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DerivedEffectiveDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DerivedExDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DerivedExDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DerivedExDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DerivedExDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DistributionTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DividendFrequencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EffectiveDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EffectiveDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EffectiveDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EffectiveDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntitlementPeriodIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntitlementPeriodStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntitlementPeriodEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntitlementPeriodType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionChIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionChPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionChPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionChSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionChSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionChType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionEuIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionEuPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionEuPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionEuSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionEuSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EusdInterestProportionEuType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventDeadline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExemptionCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiryDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiryDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiryDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiryDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtendedNarrativeSerialized)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeesIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeesPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeesPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeesSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeesSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeesType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilingDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilingDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilingDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilingDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalStampIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalStampPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalStampPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalStampSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalStampSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalStampType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FixingDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FixingDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FixingDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FixingDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FloatingRateFixingDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FloatingRateFixingDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FloatingRateFixingDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FloatingRateFixingDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Forexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrenchTaxRateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrenchTaxRatePrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrenchTaxRatePrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrenchTaxRateSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrenchTaxRateSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrenchTaxRateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Guid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasNoConflicts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncomeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncomeTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InformationStatusCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InformationStatusTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstrumentIdentityId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestCalculationMethodCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestDaysPerAnnum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestFractionIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestFractionPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestFractionPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestFractionSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestFractionSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestFractionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestPeriodIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestPeriodStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestPeriodEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestPeriodType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestRateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestRatePrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestRatePrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestRateSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestRateSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestRateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateInstrumentIdentityId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesDispositionOfFractionCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesDistributionTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesExpiryDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesExpiryDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesExpiryDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesExpiryDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesRenounceableIndicatorCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesTradingPeriodIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesTradingPeriodStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesTradingPeriodEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IntermediateSecuritiesTradingPeriodType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsConfirmed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsNarrativeChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IEventId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonAdditionalTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonBidIntervalRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonBookClosureperiod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonDepositorysuspensionperiodforwithdrawalatagent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonEusdInterestProportionCh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonEusdInterestProportionEu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonFees)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonFilingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonFiscalStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonFrenchTaxRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonInterestFraction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonInterestRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonIntermediateSecuritiesToUnderlyingRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonLotteryDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonMarketclaimtrackingenddate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonMaximumPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonMaximumquantityofsecurities)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonMinimumPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonMinimumQuantitysought)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonNewPoolFactor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonNraamount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonNrarate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonOfficialAnnouncementPublicationDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonOldPoolFactor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonPercentageSought)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonPremiumFraction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonRefundOfNra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonResultPublicationDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonTaxCreditRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonTaxOnIncome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonTaxOnProfits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonTaxRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonTaxRelatedRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonTidch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonTideu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JsonWithholdingTaxRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastChangeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastDistributionDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastDistributionDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastDistributionDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastDistributionDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastIgnoredRelevantHashcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LotteryDateTimeIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LotteryDateTimeValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LotteryDateTimeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LotteryDateTimeUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MandatoryVoluntaryIndicatorCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketclaimtrackingenddateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketclaimtrackingenddateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketclaimtrackingenddateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketclaimtrackingenddateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceQuantityTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceIsCalculated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceValue2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPriceCurrency2Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumquantityofsecuritiesIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumquantityofsecuritiesValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumquantityofsecuritiesType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeetingDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeetingDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeetingDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeetingDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceQuantityTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceIsCalculated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceValue2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPriceCurrency2Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumProcessingLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumQuantitysoughtIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumQuantitysoughtValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumQuantitysoughtType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NarrativeSerialized)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewPoolFactorIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewPoolFactorPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewPoolFactorPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewPoolFactorSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewPoolFactorSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewPoolFactorType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountQuantityTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountIsCalculated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountValue2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NraamountCurrency2Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateQuantityTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateIsCalculated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateValue2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrarateCurrency2Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Offeror)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfferTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfficialAnnouncementPublicationDateTimeIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfficialAnnouncementPublicationDateTimeValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfficialAnnouncementPublicationDateTimeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfficialAnnouncementPublicationDateTimeUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfficialEventReference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OldPoolFactorIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OldPoolFactorPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OldPoolFactorPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OldPoolFactorSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OldPoolFactorSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OldPoolFactorType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OptionCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnerCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentEvent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentIncomeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartialTypeOfDividendCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentFunctionCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentageSoughtIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentageSoughtPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentageSoughtPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentageSoughtSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentageSoughtSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentageSoughtType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceOfListing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostingDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostingDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostingDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostingDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PremiumFractionIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PremiumFractionPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PremiumFractionPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PremiumFractionSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PremiumFractionSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PremiumFractionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcessingStateCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublicationWindowEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuotationTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RatingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecordDateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecordDateValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecordDateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecordDateUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraQuantityTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraIsCalculated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraValue2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefundOfNraCurrency2Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RelevantPropertiesHashcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RenounceableIndicatorCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultPublicationDateTimeIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultPublicationDateTimeValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultPublicationDateTimeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultPublicationDateTimeUtcOffset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecurityPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SilverCopyCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SwiftMessageFunctionCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetSystemId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetSystemStateCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxAmountTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxCreditRateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxCreditRatePrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxCreditRatePrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxCreditRateSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxCreditRateSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxCreditRateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnIncomeIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnIncomePrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnIncomePrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnIncomeSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnIncomeSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnIncomeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnProfitsIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnProfitsPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnProfitsPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnProfitsSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnProfitsSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxOnProfitsType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRatePrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRatePrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRateSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRateSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRelatedRateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRelatedRatePrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRelatedRatePrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRelatedRateSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRelatedRateSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRelatedRateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TidchIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TidchPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TidchPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TidchSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TidchSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TidchType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TideuIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TideuPrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TideuPrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TideuSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TideuSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TideuType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfDividendCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfListingCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfPaymentAmountCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfPaymentAmountList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValidationTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VdfAmortizationType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VdfCashFlowId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VdfCashflowType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VdfChId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VdfDividendSupplInfoCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VdfDividendTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VdfMessageItemCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VdfPaymentAmountType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WithholdingOfForeignTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WithholdingOfLocalTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WithholdingTaxRateIsSet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WithholdingTaxRatePrimaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WithholdingTaxRatePrimaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WithholdingTaxRateSecondaryCurrencyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WithholdingTaxRateSecondaryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WithholdingTaxRateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedCustomProperties)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedOptions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedSilverCopies)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccruedInterestDays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActualContractualCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalTaxIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalTaxPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalTaxPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalTaxSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalTaxSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalTaxType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Affidavit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aftcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AftmanualSetCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnouncementDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnouncementDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnouncementDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnouncementDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BbgDividendTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BidIntervalRateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BidIntervalRatePrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BidIntervalRatePrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BidIntervalRateSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BidIntervalRateSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BidIntervalRateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockingPeriodIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockingPeriodStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockingPeriodEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockingPeriodType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookClosureperiodIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookClosureperiodStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookClosureperiodEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookClosureperiodType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashflowSetId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashflowSetTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodeEventisCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorporateActionEventStageCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CouponNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultTaxRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DenominationCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepositorysuspensionperiodforwithdrawalatagentIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepositorysuspensionperiodforwithdrawalatagentStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepositorysuspensionperiodforwithdrawalatagentEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepositorysuspensionperiodforwithdrawalatagentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DerivedEffectiveDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DerivedEffectiveDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DerivedEffectiveDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DerivedEffectiveDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DerivedExDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DerivedExDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DerivedExDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DerivedExDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DistributionTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DividendFrequencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EffectiveDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EffectiveDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EffectiveDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EffectiveDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntitlementPeriodIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntitlementPeriodStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntitlementPeriodEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntitlementPeriodType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionChIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionChPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionChPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionChSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionChSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionChType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionEuIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionEuPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionEuPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionEuSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionEuSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EusdInterestProportionEuType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventDeadline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExemptionCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpiryDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpiryDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpiryDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpiryDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExtendedNarrativeSerialized)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeesIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeesPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeesPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeesSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeesSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeesType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilingDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilingDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilingDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilingDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalStampIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalStampPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalStampPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalStampSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalStampSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalStampType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FixingDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FixingDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FixingDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FixingDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FloatingRateFixingDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FloatingRateFixingDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FloatingRateFixingDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FloatingRateFixingDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Forexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrenchTaxRateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrenchTaxRatePrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrenchTaxRatePrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrenchTaxRateSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrenchTaxRateSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrenchTaxRateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasNoConflicts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncomeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncomeTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InformationStatusCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InformationStatusTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstrumentIdentityId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestCalculationMethodCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestDaysPerAnnum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestFractionIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestFractionPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestFractionPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestFractionSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestFractionSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestFractionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestPeriodIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestPeriodStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestPeriodEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestPeriodType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestRateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestRatePrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestRatePrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestRateSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestRateSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestRateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateInstrumentIdentityId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesDispositionOfFractionCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesDistributionTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesExpiryDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesExpiryDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesExpiryDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesExpiryDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesRenounceableIndicatorCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesToUnderlyingRatioIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesToUnderlyingRatioPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesToUnderlyingRatioPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesToUnderlyingRatioSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesToUnderlyingRatioSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesToUnderlyingRatioType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesTradingPeriodIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesTradingPeriodStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesTradingPeriodEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateSecuritiesTradingPeriodType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsConfirmed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsNarrativeChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IEventId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonAdditionalTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonBidIntervalRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonBookClosureperiod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonDepositorysuspensionperiodforwithdrawalatagent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonEusdInterestProportionCh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonEusdInterestProportionEu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonFees)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonFilingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonFiscalStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonFrenchTaxRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonInterestFraction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonInterestRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonIntermediateSecuritiesToUnderlyingRatio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonLotteryDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonMarketclaimtrackingenddate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonMaximumPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonMaximumquantityofsecurities)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonMinimumPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonMinimumQuantitysought)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonNewPoolFactor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonNraamount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonNrarate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonOfficialAnnouncementPublicationDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonOldPoolFactor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonPercentageSought)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonPremiumFraction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonRefundOfNra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonResultPublicationDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonTaxCreditRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonTaxOnIncome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonTaxOnProfits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonTaxRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonTaxRelatedRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonTidch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonTideu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JsonWithholdingTaxRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastChangeDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDistributionDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDistributionDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDistributionDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDistributionDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastIgnoredRelevantHashcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LotteryDateTimeIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LotteryDateTimeValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LotteryDateTimeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LotteryDateTimeUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MandatoryVoluntaryIndicatorCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketclaimtrackingenddateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketclaimtrackingenddateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketclaimtrackingenddateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketclaimtrackingenddateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceQuantityTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceIsCalculated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceValue2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPriceCurrency2Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumquantityofsecuritiesIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumquantityofsecuritiesValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumquantityofsecuritiesType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeetingDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeetingDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeetingDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeetingDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceQuantityTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceIsCalculated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceValue2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPriceCurrency2Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumProcessingLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumQuantitysoughtIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumQuantitysoughtValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumQuantitysoughtType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NarrativeSerialized)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewPoolFactorIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewPoolFactorPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewPoolFactorPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewPoolFactorSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewPoolFactorSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewPoolFactorType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountQuantityTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountIsCalculated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountValue2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NraamountCurrency2Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateQuantityTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateIsCalculated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateValue2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrarateCurrency2Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Offeror)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfferTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficialAnnouncementPublicationDateTimeIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficialAnnouncementPublicationDateTimeValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficialAnnouncementPublicationDateTimeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficialAnnouncementPublicationDateTimeUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficialEventReference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldPoolFactorIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldPoolFactorPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldPoolFactorPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldPoolFactorSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldPoolFactorSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldPoolFactorType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OptionCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentEvent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentIncomeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartialTypeOfDividendCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentFunctionCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentageSoughtIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentageSoughtPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentageSoughtPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentageSoughtSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentageSoughtSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentageSoughtType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceOfListing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostingDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostingDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostingDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostingDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PremiumFractionIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PremiumFractionPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PremiumFractionPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PremiumFractionSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PremiumFractionSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PremiumFractionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessingStateCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublicationWindowEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuotationTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordDateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordDateValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordDateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordDateUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraQuantityTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraIsCalculated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraValue2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefundOfNraCurrency2Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RelevantPropertiesHashcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RenounceableIndicatorCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultPublicationDateTimeIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultPublicationDateTimeValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultPublicationDateTimeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultPublicationDateTimeUtcOffset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecurityPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SilverCopyCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SwiftMessageFunctionCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetSystemId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetSystemStateCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxAmountTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxCreditRateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxCreditRatePrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxCreditRatePrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxCreditRateSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxCreditRateSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxCreditRateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnIncomeIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnIncomePrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnIncomePrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnIncomeSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnIncomeSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnIncomeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnProfitsIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnProfitsPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnProfitsPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnProfitsSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnProfitsSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxOnProfitsType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRatePrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRatePrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRateSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRateSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRelatedRateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRelatedRatePrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRelatedRatePrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRelatedRateSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRelatedRateSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRelatedRateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TidchIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TidchPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TidchPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TidchSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TidchSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TidchType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TideuIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TideuPrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TideuPrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TideuSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TideuSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TideuType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfDividendCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfListingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfPaymentAmountCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfPaymentAmountList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValidationTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VdfAmortizationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VdfCashFlowId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VdfCashflowType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VdfChId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VdfDividendSupplInfoCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VdfDividendTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VdfMessageItemCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VdfPaymentAmountType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WithholdingOfForeignTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WithholdingOfLocalTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WithholdingTaxRateIsSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WithholdingTaxRatePrimaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WithholdingTaxRatePrimaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WithholdingTaxRateSecondaryCurrencyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WithholdingTaxRateSecondaryValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WithholdingTaxRateType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedCustomProperties)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedOptions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedSilverCopies)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

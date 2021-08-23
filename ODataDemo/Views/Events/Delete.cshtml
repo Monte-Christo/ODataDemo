@@ -1,0 +1,2547 @@
+﻿@model ODataDemo.Models.Event
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Etag)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Etag)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AccruedInterestDays)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AccruedInterestDays)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ActualContractualCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ActualContractualCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalTaxIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalTaxIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalTaxPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalTaxPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalTaxPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalTaxPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalTaxSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalTaxSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalTaxSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalTaxSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalTaxType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalTaxType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Affidavit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Affidavit)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aftcode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aftcode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AftmanualSetCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AftmanualSetCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnnouncementDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnnouncementDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnnouncementDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnnouncementDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnnouncementDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnnouncementDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnnouncementDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnnouncementDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BbgDividendTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BbgDividendTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BidIntervalRateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BidIntervalRateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BidIntervalRatePrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BidIntervalRatePrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BidIntervalRatePrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BidIntervalRatePrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BidIntervalRateSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BidIntervalRateSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BidIntervalRateSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BidIntervalRateSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BidIntervalRateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BidIntervalRateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BlockingPeriodIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BlockingPeriodIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BlockingPeriodStartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BlockingPeriodStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BlockingPeriodEndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BlockingPeriodEndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BlockingPeriodType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BlockingPeriodType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookClosureperiodIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookClosureperiodIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookClosureperiodStartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookClosureperiodStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookClosureperiodEndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookClosureperiodEndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookClosureperiodType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookClosureperiodType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CashflowSetId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CashflowSetId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CashflowSetTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CashflowSetTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ChangeTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ChangeTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodeEventisCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodeEventisCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CorporateActionEventStageCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CorporateActionEventStageCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CouponNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CouponNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DefaultTaxRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DefaultTaxRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DenominationCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DenominationCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DepartmentCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepartmentCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DepositorysuspensionperiodforwithdrawalatagentIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepositorysuspensionperiodforwithdrawalatagentIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DepositorysuspensionperiodforwithdrawalatagentStartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepositorysuspensionperiodforwithdrawalatagentStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DepositorysuspensionperiodforwithdrawalatagentEndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepositorysuspensionperiodforwithdrawalatagentEndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DepositorysuspensionperiodforwithdrawalatagentType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepositorysuspensionperiodforwithdrawalatagentType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DerivedEffectiveDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DerivedEffectiveDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DerivedEffectiveDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DerivedEffectiveDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DerivedEffectiveDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DerivedEffectiveDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DerivedEffectiveDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DerivedEffectiveDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DerivedExDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DerivedExDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DerivedExDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DerivedExDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DerivedExDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DerivedExDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DerivedExDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DerivedExDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DistributionTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DistributionTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DividendFrequencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DividendFrequencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DueDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DueDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DueDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DueDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DueDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DueDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DueDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DueDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EffectiveDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EffectiveDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EffectiveDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EffectiveDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EffectiveDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EffectiveDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EffectiveDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EffectiveDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EntitlementPeriodIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EntitlementPeriodIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EntitlementPeriodStartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EntitlementPeriodStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EntitlementPeriodEndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EntitlementPeriodEndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EntitlementPeriodType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EntitlementPeriodType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionChIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionChIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionChPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionChPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionChPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionChPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionChSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionChSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionChSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionChSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionChType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionChType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionEuIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionEuIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionEuPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionEuPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionEuPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionEuPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionEuSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionEuSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionEuSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionEuSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EusdInterestProportionEuType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EusdInterestProportionEuType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EventDeadline)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EventDeadline)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EventTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EventTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExemptionCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExemptionCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExpiryDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExpiryDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExpiryDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExpiryDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExpiryDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExpiryDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExpiryDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExpiryDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtendedNarrativeSerialized)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExtendedNarrativeSerialized)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FamilyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FamilyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FeesIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FeesIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FeesPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FeesPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FeesPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FeesPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FeesSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FeesSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FeesSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FeesSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FeesType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FeesType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FilingDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FilingDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FilingDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FilingDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FilingDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FilingDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FilingDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FilingDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FiscalStampIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FiscalStampIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FiscalStampPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FiscalStampPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FiscalStampPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FiscalStampPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FiscalStampSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FiscalStampSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FiscalStampSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FiscalStampSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FiscalStampType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FiscalStampType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FixingDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FixingDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FixingDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FixingDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FixingDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FixingDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FixingDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FixingDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FloatingRateFixingDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FloatingRateFixingDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FloatingRateFixingDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FloatingRateFixingDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FloatingRateFixingDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FloatingRateFixingDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FloatingRateFixingDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FloatingRateFixingDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Forexo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Forexo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FrenchTaxRateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FrenchTaxRateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FrenchTaxRatePrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FrenchTaxRatePrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FrenchTaxRatePrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FrenchTaxRatePrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FrenchTaxRateSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FrenchTaxRateSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FrenchTaxRateSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FrenchTaxRateSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FrenchTaxRateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FrenchTaxRateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Guid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Guid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HasNoConflicts)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HasNoConflicts)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IncomeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IncomeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IncomeTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IncomeTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InformationStatusCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InformationStatusCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InformationStatusTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InformationStatusTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InstrumentIdentityId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InstrumentIdentityId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestAmount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestAmount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestCalculationMethodCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestCalculationMethodCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestDaysPerAnnum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestDaysPerAnnum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestFractionIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestFractionIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestFractionPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestFractionPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestFractionPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestFractionPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestFractionSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestFractionSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestFractionSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestFractionSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestFractionType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestFractionType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestPeriodIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestPeriodIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestPeriodStartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestPeriodStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestPeriodEndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestPeriodEndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestPeriodType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestPeriodType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestRateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestRateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestRatePrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestRatePrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestRatePrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestRatePrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestRateSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestRateSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestRateSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestRateSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestRateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InterestRateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateInstrumentIdentityId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateInstrumentIdentityId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesDispositionOfFractionCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesDispositionOfFractionCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesDistributionTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesDistributionTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesExpiryDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesExpiryDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesExpiryDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesExpiryDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesExpiryDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesExpiryDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesExpiryDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesExpiryDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesRenounceableIndicatorCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesRenounceableIndicatorCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesToUnderlyingRatioIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesToUnderlyingRatioPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesToUnderlyingRatioPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesToUnderlyingRatioSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesToUnderlyingRatioSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesToUnderlyingRatioType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesToUnderlyingRatioType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesTradingPeriodIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesTradingPeriodIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesTradingPeriodStartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesTradingPeriodStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesTradingPeriodEndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesTradingPeriodEndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntermediateSecuritiesTradingPeriodType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntermediateSecuritiesTradingPeriodType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsConfirmed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsConfirmed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsNarrativeChecked)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsNarrativeChecked)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IEventId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IEventId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonAdditionalTax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonAdditionalTax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonBidIntervalRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonBidIntervalRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonBookClosureperiod)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonBookClosureperiod)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonDepositorysuspensionperiodforwithdrawalatagent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonDepositorysuspensionperiodforwithdrawalatagent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonEusdInterestProportionCh)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonEusdInterestProportionCh)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonEusdInterestProportionEu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonEusdInterestProportionEu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonFees)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonFees)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonFilingDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonFilingDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonFiscalStamp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonFiscalStamp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonFrenchTaxRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonFrenchTaxRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonInterestFraction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonInterestFraction)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonInterestRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonInterestRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonIntermediateSecuritiesToUnderlyingRatio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonIntermediateSecuritiesToUnderlyingRatio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonLotteryDateTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonLotteryDateTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonMarketclaimtrackingenddate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonMarketclaimtrackingenddate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonMaximumPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonMaximumPrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonMaximumquantityofsecurities)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonMaximumquantityofsecurities)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonMinimumPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonMinimumPrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonMinimumQuantitysought)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonMinimumQuantitysought)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonNewPoolFactor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonNewPoolFactor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonNraamount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonNraamount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonNrarate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonNrarate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonOfficialAnnouncementPublicationDateTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonOfficialAnnouncementPublicationDateTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonOldPoolFactor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonOldPoolFactor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonPercentageSought)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonPercentageSought)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonPremiumFraction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonPremiumFraction)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonRefundOfNra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonRefundOfNra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonResultPublicationDateTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonResultPublicationDateTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonTaxCreditRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonTaxCreditRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonTaxOnIncome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonTaxOnIncome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonTaxOnProfits)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonTaxOnProfits)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonTaxRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonTaxRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonTaxRelatedRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonTaxRelatedRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonTidch)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonTidch)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonTideu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonTideu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JsonWithholdingTaxRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JsonWithholdingTaxRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastChangeDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastChangeDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastDistributionDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastDistributionDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastDistributionDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastDistributionDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastDistributionDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastDistributionDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastDistributionDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastDistributionDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastIgnoredRelevantHashcode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastIgnoredRelevantHashcode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LotteryDateTimeIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LotteryDateTimeIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LotteryDateTimeValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LotteryDateTimeValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LotteryDateTimeType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LotteryDateTimeType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LotteryDateTimeUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LotteryDateTimeUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MandatoryVoluntaryIndicatorCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MandatoryVoluntaryIndicatorCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MarketclaimtrackingenddateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MarketclaimtrackingenddateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MarketclaimtrackingenddateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MarketclaimtrackingenddateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MarketclaimtrackingenddateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MarketclaimtrackingenddateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MarketclaimtrackingenddateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MarketclaimtrackingenddateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceQuantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceQuantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceQuantityTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceQuantityTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceIsCalculated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceIsCalculated)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceValue2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceValue2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumPriceCurrency2Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumPriceCurrency2Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumquantityofsecuritiesIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumquantityofsecuritiesIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumquantityofsecuritiesValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumquantityofsecuritiesValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaximumquantityofsecuritiesType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaximumquantityofsecuritiesType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MeetingDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MeetingDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MeetingDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MeetingDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MeetingDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MeetingDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MeetingDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MeetingDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceQuantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceQuantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceQuantityTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceQuantityTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceIsCalculated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceIsCalculated)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceValue2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceValue2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumPriceCurrency2Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumPriceCurrency2Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumProcessingLevel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumProcessingLevel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumQuantitysoughtIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumQuantitysoughtIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumQuantitysoughtValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumQuantitysoughtValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinimumQuantitysoughtType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MinimumQuantitysoughtType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NarrativeSerialized)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NarrativeSerialized)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewPoolFactorIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewPoolFactorIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewPoolFactorPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewPoolFactorPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewPoolFactorPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewPoolFactorPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewPoolFactorSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewPoolFactorSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewPoolFactorSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewPoolFactorSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewPoolFactorType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewPoolFactorType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountQuantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountQuantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountQuantityTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountQuantityTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountIsCalculated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountIsCalculated)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountValue2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountValue2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NraamountCurrency2Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NraamountCurrency2Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateQuantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateQuantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateQuantityTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateQuantityTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateIsCalculated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateIsCalculated)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateValue2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateValue2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrarateCurrency2Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrarateCurrency2Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Offeror)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Offeror)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OfferTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OfferTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OfficialAnnouncementPublicationDateTimeIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OfficialAnnouncementPublicationDateTimeIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OfficialAnnouncementPublicationDateTimeValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OfficialAnnouncementPublicationDateTimeValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OfficialAnnouncementPublicationDateTimeType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OfficialAnnouncementPublicationDateTimeType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OfficialAnnouncementPublicationDateTimeUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OfficialAnnouncementPublicationDateTimeUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OfficialEventReference)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OfficialEventReference)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OldPoolFactorIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OldPoolFactorIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OldPoolFactorPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OldPoolFactorPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OldPoolFactorPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OldPoolFactorPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OldPoolFactorSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OldPoolFactorSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OldPoolFactorSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OldPoolFactorSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OldPoolFactorType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OldPoolFactorType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OptionCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OptionCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrderTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OwnerCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OwnerCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParentEvent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParentEvent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParentIncomeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParentIncomeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PartialTypeOfDividendCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PartialTypeOfDividendCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentFunctionCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentFunctionCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PercentageSoughtIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PercentageSoughtIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PercentageSoughtPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PercentageSoughtPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PercentageSoughtPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PercentageSoughtPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PercentageSoughtSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PercentageSoughtSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PercentageSoughtSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PercentageSoughtSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PercentageSoughtType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PercentageSoughtType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PlaceOfListing)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlaceOfListing)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PostingDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PostingDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PostingDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PostingDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PostingDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PostingDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PostingDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PostingDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PremiumFractionIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PremiumFractionIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PremiumFractionPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PremiumFractionPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PremiumFractionPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PremiumFractionPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PremiumFractionSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PremiumFractionSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PremiumFractionSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PremiumFractionSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PremiumFractionType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PremiumFractionType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProcessingStateCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProcessingStateCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PublicationWindowEndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PublicationWindowEndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QuotationTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QuotationTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RatingCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RatingCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RecordDateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RecordDateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RecordDateValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RecordDateValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RecordDateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RecordDateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RecordDateUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RecordDateUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReferenceDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReferenceDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraQuantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraQuantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraQuantityTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraQuantityTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraIsCalculated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraIsCalculated)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraValue2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraValue2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RefundOfNraCurrency2Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RefundOfNraCurrency2Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RelevantPropertiesHashcode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RelevantPropertiesHashcode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RenounceableIndicatorCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RenounceableIndicatorCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResultPublicationDateTimeIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResultPublicationDateTimeIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResultPublicationDateTimeValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResultPublicationDateTimeValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResultPublicationDateTimeType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResultPublicationDateTimeType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResultPublicationDateTimeUtcOffset)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResultPublicationDateTimeUtcOffset)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SecurityPosition)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SecurityPosition)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SilverCopyCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SilverCopyCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.State)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SwiftMessageFunctionCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SwiftMessageFunctionCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TargetSystemId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TargetSystemId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TargetSystemStateCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TargetSystemStateCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxAmountTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxAmountTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxCreditRateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxCreditRateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxCreditRatePrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxCreditRatePrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxCreditRatePrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxCreditRatePrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxCreditRateSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxCreditRateSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxCreditRateSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxCreditRateSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxCreditRateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxCreditRateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnIncomeIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnIncomeIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnIncomePrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnIncomePrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnIncomePrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnIncomePrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnIncomeSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnIncomeSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnIncomeSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnIncomeSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnIncomeType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnIncomeType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnProfitsIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnProfitsIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnProfitsPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnProfitsPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnProfitsPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnProfitsPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnProfitsSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnProfitsSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnProfitsSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnProfitsSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxOnProfitsType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxOnProfitsType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRatePrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRatePrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRatePrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRatePrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRateSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRateSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRateSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRateSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRelatedRateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRelatedRateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRelatedRatePrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRelatedRatePrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRelatedRatePrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRelatedRatePrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRelatedRateSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRelatedRateSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRelatedRateSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRelatedRateSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaxRelatedRateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaxRelatedRateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TidchIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TidchIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TidchPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TidchPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TidchPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TidchPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TidchSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TidchSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TidchSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TidchSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TidchType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TidchType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TideuIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TideuIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TideuPrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TideuPrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TideuPrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TideuPrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TideuSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TideuSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TideuSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TideuSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TideuType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TideuType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TransactionTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TypeOfDividendCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeOfDividendCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TypeOfListingCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeOfListingCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TypeOfPaymentAmountCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeOfPaymentAmountCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TypeOfPaymentAmountList)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeOfPaymentAmountList)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ValidationTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ValidationTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VdfAmortizationType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VdfAmortizationType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VdfCashFlowId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VdfCashFlowId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VdfCashflowType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VdfCashflowType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VdfChId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VdfChId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VdfDividendSupplInfoCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VdfDividendSupplInfoCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VdfDividendTypeCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VdfDividendTypeCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VdfMessageItemCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VdfMessageItemCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VdfPaymentAmountType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VdfPaymentAmountType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithholdingOfForeignTax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithholdingOfForeignTax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithholdingOfLocalTax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithholdingOfLocalTax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithholdingTaxRateIsSet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithholdingTaxRateIsSet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithholdingTaxRatePrimaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithholdingTaxRatePrimaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithholdingTaxRatePrimaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithholdingTaxRatePrimaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithholdingTaxRateSecondaryCurrencyCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithholdingTaxRateSecondaryCurrencyCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithholdingTaxRateSecondaryValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithholdingTaxRateSecondaryValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithholdingTaxRateType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithholdingTaxRateType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LinkedCustomProperties)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LinkedCustomProperties)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LinkedOptions)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LinkedOptions)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LinkedSilverCopies)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LinkedSilverCopies)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
