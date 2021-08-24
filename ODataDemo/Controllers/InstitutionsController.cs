@@ -130,6 +130,9 @@ namespace ODataDemo.Controllers
                 return NotFound();
             }
 
+            _context.Remove(institution);
+            await _context.SaveChangesAsync();
+
             return View(institution);
         }
 

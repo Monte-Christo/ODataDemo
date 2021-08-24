@@ -22,7 +22,7 @@ Install-Package Microsoft.EntityFrameworkCore.Tools
 
 ### CData Assemblies (check the hint path on your installation)
 
-```PowerShell
+```XML
   <Reference Include="CData.EntityFrameworkCore.OData">
     <HintPath>C:\Program Files\CData\CData ADO.NET Provider for OData 2021\lib\netstandard2.1\EFCORE50\CData.EntityFrameworkCore.OData.dll</HintPath>
   </Reference>
