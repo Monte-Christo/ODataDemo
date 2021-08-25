@@ -18,10 +18,10 @@
 
   <ItemGroup>
     <Reference Include="CData.EntityFrameworkCore.OData">
-      <HintPath>C:\Program Files\CData\CData ADO.NET Provider for OData 2021\lib\netstandard2.1\EFCORE50\CData.EntityFrameworkCore.OData.dll</HintPath>
+      <HintPath>..\Externals\CData.EntityFrameworkCore.OData.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.CData.OData">
-      <HintPath>C:\Program Files\CData\CData ADO.NET Provider for OData 2021\lib\netstandard2.0\System.Data.CData.OData.dll</HintPath>
+      <HintPath>..\Externals\System.Data.CData.OData.dll</HintPath>
     </Reference>
   </ItemGroup>
 
