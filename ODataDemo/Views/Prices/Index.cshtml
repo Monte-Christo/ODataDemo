@@ -1,0 +1,197 @@
+﻿@model IEnumerable<ODataDemo.Models.Price>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Etag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvestigationChecksApplied)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvestigationCreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ICurrency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IInstrumentIdentityId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IPricingMethod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IReferencePriceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastModificationTimestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModificationReasonCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceSourceInformationFallback)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceSourceInformationPart1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceUnitCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProviderCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProviderPriceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProviderPriceTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuotationMode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuotationTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RequestCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SnapshotTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spread)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Volume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yield)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedCustomProperties)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedSilverCopies)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvestigationChecksApplied)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvestigationCreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ICurrency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IInstrumentIdentityId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPricingMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IReferencePriceDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastModificationTimestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModificationReasonCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceSourceInformationFallback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceSourceInformationPart1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceUnitCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProviderCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProviderPriceDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProviderPriceTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuotationMode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuotationTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SnapshotTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Spread)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Volume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yield)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedCustomProperties)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedSilverCopies)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
